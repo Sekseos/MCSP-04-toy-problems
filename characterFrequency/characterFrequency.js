@@ -7,4 +7,22 @@
 // "mississippi" => [ [ "i", 4 ], [ "s", 4 ], [ "p", 2 ], [ "m", 1 ] ]
 // "" => [ ]
 
-function characterFrequency() {}
+function characterFrequency(string) {
+    var newArr = [];
+    for (var i = 0; i < string.length; i++) {
+        var innerArr = [];
+        var currChar = '';
+        var count = 0;
+        currChar = string[i];
+        for (var j = 0; j < string.length; j++) {
+            if (currChar === string[j]) {
+                count++;
+                delete string[j];
+            }
+        }
+        innerArr.push(currChar);
+        innerArr.push(count);
+        newArr.push(innerArr);
+    }
+    return newArr;
+}

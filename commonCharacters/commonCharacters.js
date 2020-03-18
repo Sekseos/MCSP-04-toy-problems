@@ -11,5 +11,26 @@
  */
 
 var commonCharacters = function(string1, string2) {
-  // TODO: Your code here!
+    // given: TWO STRINGS
+    // output: ONE STRING showing EACH CHAR USED IN ORDER
+    // Constraints: NO SPACES / NO DUPLICATES
+    //vars
+    var stringD1 = string1.split('');
+    var stringD2 = string2.split('');
+    var output = [];
+    // Iterate Twice
+    for (var i = 0; i < stringD1.length; i++) {
+        // Convert the each of the first string-chars to a char-value and test it on string 2
+        var curChar = stringD1[i];
+        for (var j = 0; j < stringD2.length; j++) {
+            if (curChar === stringD2[j] && curChar !== output[j]) {
+                output.push(curChar);
+            }
+        }
+    };
+    output = output.toString();
+    return output;
 };
+
+commonCharacters('acexivou', 'aegihobu');
+// Returns: 'aeiou'

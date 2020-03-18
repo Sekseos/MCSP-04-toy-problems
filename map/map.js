@@ -23,5 +23,6 @@
 // }) //=> ['aa','ba','ca']
 
 function map(array, func) {
-  // Your work here!
+    var newArr = array;
+    // Your work here!
 }
