@@ -13,5 +13,6 @@
  */
 
 var allAnagrams = function(string) {
-  // Your code here.
+  var sepChars = string.split('');
+  var outputs = [];
 };
