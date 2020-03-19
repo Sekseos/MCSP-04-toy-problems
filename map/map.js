@@ -23,6 +23,17 @@
 // }) //=> ['aa','ba','ca']
 
 function map(array, func) {
-    var newArr = array;
-    // Your work here!
+    var newArr = [];
+    array.forEach(item => {
+        newArr.push(func(item));
+    })
+    return newArr;
 }
+
+console.log(map([1,2,3],function doubler(element){
+  return element*2;
+})); //=> [2,4,6]
+
+console.log(map(['a','b','c'],function addA(element){
+  return element+'a';
+})); //=> ['aa','ba','ca']
