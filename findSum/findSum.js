@@ -10,6 +10,12 @@
  * findsum(10) should return 33. (3 + 5 + 6 + 9 + 10)
  */
 
- function findSum(n){
-   // TODO: Your work here!
- }
+  function findSum(n){
+    var output = 0;
+    for (var i = 0; i <= n; i++) {
+      if ((i % 3 === 0) || (i % 5 === 0)) {
+        output += i;
+      }
+    }
+    return output;
+  }
