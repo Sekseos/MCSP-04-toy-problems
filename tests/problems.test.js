@@ -16,3 +16,22 @@ describe('findSum', () => {
 
   })
 });
+describe('reduce', () => {
+  const sum = function(acc, curr) {
+    return acc + curr;
+  };
+  it('expect reducer to return a single value', () => {
+    const val = reduce([1, 4, 2], iterator);
+    expect(val).to.equal(7);
+  });
+  it('expect reducer to accept Arrays as arguments', () => {
+    const val = reduce([2, 6, 3], iterator);
+    expect val.to.equal(11);
+  });
+  it('expect reducer to allow for no iterator', () => {
+    const val = reduce([1, 2, 3]);
+    expect val.to.equal(6);
+  });
+});
+
+

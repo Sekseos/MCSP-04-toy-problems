@@ -5,7 +5,7 @@
 
 // As input, reduce takes two parameters.
 
-// An array
+// An array OR object
 // A function
 // As output, reduce returns the single value resulting from the function's reduction.
 // DO NOT use array.reduce

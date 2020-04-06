@@ -4,7 +4,11 @@ To use this repository:
 
 - Fork this repo to your account
 - Clone down your new personal repository to your machine
+<<<<<<< HEAD
 - cd into your local folder and run the command `git remote add solutions https://github.com/MCSP-toy-problems/MCSP-04-toy-problems.git`
+=======
+- cd into your local folder and run the command `git remote add solutions https://github.com/MCSP-toy-problems/MCSP-04-CLASS-NAME-toy-problems.git`
+>>>>>>> c3c61599363b72b27d7266d57a8dc18f7b18e0e8
 - Use `git pull solutions master` to check for any updated content or released solutions
 
 Solutions will be released the day of or the day after the toy problem was assigned.
