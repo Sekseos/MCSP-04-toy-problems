@@ -9,6 +9,7 @@
  * var onlyEven = evenOccurrence([1, 7, 2, 4, 5, 6, 8, 9, 6, 4]);
  * console.log(onlyEven); //  4
  */
+
 //** NEW SOLUTION - Time Complexity 0(n) because both loops iterate only once for each element of an n-sized array */
 var evenOccurrence = (arr) => {
   // Create an object that counts each array element
