@@ -27,24 +27,26 @@ var binarySearch = function(array, target) { //LOGARITHMIC : O(logn)
   
   //Get the first index - create a var
   //Get the last index - create a var
-  let last = array.length - 1;
-  let first = 0;
-  let result = null;
-  while (array.length > 1) {
-    let middle = Math.floor(first + last / 2);
-    console.log("Current Guess:", array[middle]);
-    console.log("Last:", last, " First:", first, " middle:", middle);
-    if (target < array[middle]) {
-      last = middle;
-    } 
-    if (target > array[middle]) {
-      first = middle;
-    } 
-    if (target === array[middle]){
-      result = array[middle];
-    }
-  }
-  return result;
+
+  
+  // let last = array.length - 1;
+  // let first = 0;
+  // let result = null;
+  // while (middle !== target) {
+  //   let middle = Math.floor(last / 2);
+  //   console.log("Current Guess:", array[middle]);
+  //   console.log("Last:", last, " First:", first, " middle:", middle);
+  //   if (target < array[middle]) {
+  //     last = middle;
+  //   } 
+  //   if (target > array[middle]) {
+  //     first = middle;
+  //   } 
+  //   if (target === array[middle]){
+  //     result = array[middle];
+  //   }
+  // }
+  // return result;
 };
 
 var index = binarySearch([1, 2, 3, 4, 5], 4);

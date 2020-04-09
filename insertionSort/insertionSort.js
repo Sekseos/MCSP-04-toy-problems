@@ -46,6 +46,24 @@ var testingTransform = function(array) {
 };
 
 var insertionSort = function(array) {
-  // Your code goes here. Feel free to add helper functions if needed.
+  //PSEUDO
+  // My objective is to check each element against the last sorted element - Starting with element 0.
+  // Nested Loops. Outer Loop is (SecondIndex --> Array-Length), Inner Loop is (FirstIndex --> OuterIndex)
+  // Check the Outer value against the inner value.
+  // Greater than? Nothing
+  // Less Than? - 
+for (let i = 1; i < array.length; i++) {
+  for (let j = 0; j < i; j++) {
+
+  }
+}
+
   return array;
 };
+
+// TESTS
+let sortedArr = [4,1,5,6,7,8,9];
+let unsortedArr = [3,8,5,9,1,7,2,6,4];
+
+console.log("Sorted Test: ", testingTransform(sortedArr)); // Expect [1,4,5,6,7,8,9]
+console.log("Unsorted Test: ", testingTransform(unsortedArr)); // Expect [1,2,3,4,5,6,7,8,9]
