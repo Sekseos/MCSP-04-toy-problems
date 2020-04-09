@@ -10,42 +10,41 @@
  * console.log(index); // null
  */
 
-var binarySearch = function(array, target) {
+var binarySearch = function(array, target) { //LOGARITHMIC : O(logn)
   // Binary Search Algorithm
   /* 
   * Binary search compares the target value 
   *  to the middle element of the array.
   */
-    //Iterate (Recurse)
-    //create a search variable equal to the middle value OR null
-      //BASE CASE: check search var against null
-        //YES -> Return the search var
-        //NO -> Repeat
-    //check the search var against the target var
-      //YES -> return the search var's index
-      //NO -> Repeat
+    //** ALWAYS AVOID RECURSION **/
 
   /* NOTES:
   * 1. Checkiong if greater or less than.
-  * 2. Split the array on each recursion
-  * 
+  * 2. Split the array on each iteration
+  * 3. Hold vars for first and last index
   * 
   */
-
-  inner = (arr, tar) => {
-    let search = Math.ceil(array[array.length - 1] / 2);
-    console.log("Searching... : ", search);
-    if (search <= 1) {
-      return null;
+  
+  //Get the first index - create a var
+  //Get the last index - create a var
+  let last = array.length - 1;
+  let first = 0;
+  let result = null;
+  while (array.length > 1) {
+    let middle = Math.floor(first + last / 2);
+    console.log("Current Guess:", array[middle]);
+    console.log("Last:", last, " First:", first, " middle:", middle);
+    if (target < array[middle]) {
+      last = middle;
+    } 
+    if (target > array[middle]) {
+      first = middle;
+    } 
+    if (target === array[middle]){
+      result = array[middle];
     }
-    if (search === target) {
-      return search;
-    }
-    search < target ? 
-        inner(array.splice(array[0], search), target) 
-        : inner(array.splice(search, array.length - 1), target);
   }
-  return inner(array, target);
+  return result;
 };
 
 var index = binarySearch([1, 2, 3, 4, 5], 4);
