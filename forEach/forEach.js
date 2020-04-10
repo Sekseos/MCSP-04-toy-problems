@@ -13,5 +13,10 @@
 // forEach(['a','b','c'],function logger(element){console.log(element)}); --> logs 'a', 'b', 'c'
 
 function forEach(array, func) {
-  // Your work here!
+  for (let i = 0; i < array.length; i++) {
+    func(array[i]);
+  }
 }
+
+forEach([1,2,3],console.log); // --> logs 1, 2, 3
+forEach(['a','b','c'],function logger(element){console.log(element)}); // --> logs 'a', 'b', 'c'
