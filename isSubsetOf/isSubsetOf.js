@@ -22,5 +22,19 @@
  */
 
 Array.prototype.isSubsetOf = function(arr) {
-  // your code here
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (this[i] === arr[j]) {
+        return true;
+      } 
+    }
+  }
+  return false;
 };
+
+//TEST
+var b = ['merge','reset','reset']
+var c = ['done', 'none', 'this']
+
+console.log(b.isSubsetOf(['reset','merge','add','commit'])); // true
+console.log(c.isSubsetOf(['reset', 'merge', 'add', 'commit'])); // false
