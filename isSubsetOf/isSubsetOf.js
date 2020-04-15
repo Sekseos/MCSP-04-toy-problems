@@ -22,6 +22,11 @@
  */
 
 Array.prototype.isSubsetOf = function(arr) {
+  namedArr = new Object;
+  Array.forEach((val) => {
+    namedArr.val = Array[val]; 
+  });
+  console.log(namedArr);
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       if (this[i] === arr[j]) {
@@ -32,7 +37,7 @@ Array.prototype.isSubsetOf = function(arr) {
   return false;
 };
 
-//TEST
+//TEST // FAILS AFTER FIRST ELEMENT IS CHECKED
 var b = ['merge','reset','reset']
 var c = ['done', 'none', 'this']
 
