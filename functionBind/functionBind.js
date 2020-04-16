@@ -23,8 +23,9 @@
  *
  */
 
-var bind = function() {
-  // TODO: Your code here
+var bind = function(func, ...params) {
+  newFunc = func(...params) {}
+  return newFunc;
 };
 
 /*
