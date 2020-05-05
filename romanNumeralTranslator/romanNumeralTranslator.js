@@ -27,5 +27,22 @@ var DIGIT_VALUES = {
 };
 
 var translateRomanNumeral = function(romanNumeral) {
-  // TODO: Implement me!
+  if (romanNumeral === NaN) {
+    return null;
+  }
+  let placeholder = [];
+  for (let i = 0; i < romanNumeral.length; i++) {
+    placeholder[i] = DIGIT_VALUES[romanNumeral[i]]
+    console.log(placeholder[i]);
+  }
+  let result;
+  for (let j = 0; j < placeholder.length; j++) {
+    if (placeholder[j] < placeholder[j + 1]) {
+      result = placeholder[j + 1] - placeholder[j];
+    }
+    if (placeholder[j] > placeholder[j + 1]) {
+      result = placeholder[j] + placeholder[j + 1];
+    }
+  }
+  return result;
 };
